@@ -111,7 +111,7 @@ ddoc.spatial = {
 }
 
 ddoc.lists = {
-  asset: function(head, req) {
+  "asset": function(head, req) {
     var row, out, sep = '\n';
 
     // Send the same Content-Type as CouchDB would
@@ -136,7 +136,7 @@ ddoc.lists = {
    * 
    * @author Volker Mische
    */
-  geojson: function(head, req) {
+  "geojson": function(head, req) {
     var row, out, sep = '\n';
 
     // Send the same Content-Type as CouchDB would
@@ -160,7 +160,7 @@ ddoc.lists = {
     send("]}");
     if ('callback' in req.query) send(")");
   },
-  jsonp: function(head, req) {
+  "jsonp": function(head, req) {
     var row, out, sep = '\n';
 
     // Send the same Content-Type as CouchDB would
@@ -178,7 +178,7 @@ ddoc.lists = {
     }
     if ('callback' in req.query) send(")");
   },
-  sum: function(head, req) {
+  "sum": function(head, req) {
     var row, out, sum = 0, sep = '\n';
 
     // Send the same Content-Type as CouchDB would
