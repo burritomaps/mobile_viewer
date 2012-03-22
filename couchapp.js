@@ -66,33 +66,33 @@ ddoc =
   };
 
 ddoc.views = {
-  assetid: {
+  "assetid": {
     map: function(doc) {
       emit(doc._id, doc);
     }
   },
-  attach-count: {
+  "attach-count": {
     map: function(doc) {
       if (doc.source =='San Francisco Arts Commission') {
         if (doc._attachments) emit(null, Object.keys(Object(doc._attachments)).length);
       }
     }
   },
-  config: {
+  "config": {
     map: function(doc) {
       if(doc.doc_type && doc.doc_type === "config") {
         emit(doc._id, doc);
       }
     }
   },
-  recent-items: {
+  "recent-items": {
     map: function(doc) {
       if (doc.created_at) {
         emit(doc.created_at, doc);
       }
     }
   },
-  sfonly: {
+  "sfonly": {
     map: function(doc) { 
       if(doc.source =='San Francisco Arts Commission') emit(doc.accession_id, doc);
     }
