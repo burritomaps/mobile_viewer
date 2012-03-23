@@ -3,36 +3,16 @@ var path = require('path')
 
 ddoc = 
   { "_id":'_design/mobile_viewer',
-    "description": "This mobile website can sit on top of properly formatted public art data and display it on a map.",
-    "name": "Public Art Finder",
+    "description": "jQuery mobile app that lets people discover data near their location",
+    "name": "Mobile Viewer",
     "rewrites": [
       {
-        "to": "favicon.ico",
-        "from": "favicon.ico"
-      },
-      {
-        "to": "stylesheets/*",
-        "from": "stylesheets/*"
-      },
-      {
-        "to": "javascripts/*",
-        "from": "javascripts/*"
-      },
-      {
-        "to": "vendor/*",
-        "from": "vendor/*"
-      },
-      {
-        "to": "images/*",
-        "from": "images/*"
-      },
-      {
-        "to": "../../*",
+        "to": "/../../*",
         "from": "dbimgs/*"
       },
       {
-        "to": "_list/jsonp/assetid",
-        "from": "/assetid"
+        "to": "/_list/jsonp/assetid",
+        "from": "assetid"
       },
       {
         "to": "index.html",
@@ -43,23 +23,19 @@ ddoc =
         "from": "details.html"
       },
       {
-        "to": "_spatial/_list/geojson/full",
+        "to": "/_spatial/_list/geojson/full",
         "from": "/data"
       },
       {
-        "to": "_list/jsonp/config",
+        "to": "/_list/jsonp/config",
         "from": "/config"
       },
       {
-        "to": "./",
-        "from": "ddoc"
-      },
-      {
-        "to": "../../",
+        "to": "/../../",
         "from": "api"
       },
       {
-        "to": "../../*",
+        "to": "/../../*",
         "from": "api/*"
       }
     ]
